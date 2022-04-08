@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="02-Mybatis-02-More-Mapper" />
+        <module name="02-MyBatis-06-Alias" />
+        <module name="02-MyBatis-07-log4j2" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="02-Myabtis-03-Character" target="1.8" />
+      <module name="02-Mybatis-02-More-Mapper" target="1.8" />
+      <module name="02-MyBatis-06-Alias" target="1.8" />
+      <module name="02-MyBatis-07-log4j2" target="1.8" />
+      <module name="_01-ThirdLayerApplication" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

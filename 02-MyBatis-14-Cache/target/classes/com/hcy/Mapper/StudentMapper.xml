@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--映射文件，namespace命名空间。对应一个完全的全限定名，只能有一个  id必须和接口中的方法名完全相同-->
+<mapper namespace="com.hcy.dao.StudentDao">
+    <!--    开启二级缓存 当所有的命名空间下的所有查询语句都会存在缓存-->
+    <cache/>
+    <select id="findById" parameterType="Integer" resultType="com.hcy.entity.Student">
+        select *
+        from student
+        where id = #{id}
+    </select>
+    <update id="updateStu" parameterType="com.hcy.entity.Student">
+        update student
+        set info =#{info}
+        where id = #{id}
+    </update>
+</mapper>

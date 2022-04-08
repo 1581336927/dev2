@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Main-Class: 
+Class-Path: spring-aop-5.3.8.jar spring-expression-5.3.8.jar spring-web-
+ 5.3.1.jar spring-core-5.3.8.jar spring-beans-5.3.8.jar lombok-1.18.20.j
+ ar spring-jcl-5.3.8.jar spring-context-5.3.8.jar spring-webmvc-5.3.8.ja
+ r
+

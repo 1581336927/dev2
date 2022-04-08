@@ -1,0 +1,5 @@
+# Project exclude paths
+/02-Myabtis-03-Character/target/
+/02-Mybatis-02-More-Mapper/target/
+/02-MyBatis-06-Alias/target/
+/02-MyBatis-07-log4j2/target/

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--映射文件，namespace命名空间。对应一个完全的全限定名，只能有一个  id必须和接口中的方法名完全相同-->
+<mapper namespace="com.hcy.dao.ManagerDao">
+<!--resultMap自定义的映射规则
+id：唯一标识，可以让sql语句标签来调用-->
+    <resultMap id="findByIdMap" type="com.hcy.entity.Manager">
+        <id column="mgr_id" property="id"/>
+        <id column="mgr_name" property="name"/>
+        <id column="mgr_pwd" property="pwd"/>
+    </resultMap>
+
+
+    <select id="findAll" resultType="com.hcy.entity.Manager">
+        select mgr_id as id,mgr_name as name,mgr_pwd as pwd from t_managers
+    </select>
+
+    <select id="findId" resultMap="findByIdMap" parameterType="Integer">
+        select * from t_managers where mgr_id=#{id}
+    </select>
+</mapper>

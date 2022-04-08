@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--映射文件，namespace命名空间。对应一个完全的全限定名，只能有一个  id必须和接口中的方法名完全相同-->
+<mapper namespace="com.hcy.dao.EmployeeDao">
+    <!--    开启二级缓存 当所有的命名空间下的所有查询语句都会存在缓存-->
+    <cache/>
+    <!--查询所有学生-->
+    <resultMap id="findId" type="com.hcy.entity.Department">
+        <id column="dept_id" property="id"></id>
+        <result column="dept_name" property="name"></result>
+        <collection column="dept_id" select="com.hcy.dao.EmployeeDao" property="employees" javaType="List" ofType="com.hcy.entity.Employee"></collection>
+    </resultMap>
+   <select id="findAll" resultMap="findId">
+       select * from department where dept_id=#{id}
+   </select>
+</mapper>

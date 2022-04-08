@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd ">
+
+    <bean class="com.hcy.entity.Address" id="address">
+        <property name="address" value="河南省周口市"/>
+    </bean>
+
+    <bean class="com.hcy.entity.Student">
+<!-- 普通注入-->
+        <property name="name" value="韩晨宇"/>
+<!--对象注入-->
+        <property name="address" ref="address"/>
+<!--数组注入的方式-->
+        <property name="books">
+            <array>
+                <value>哈利波特</value>
+                <value>水浒传</value>
+            </array>
+        </property>
+<!--List注入-->
+        <property name="hobbys">
+            <list>
+                <value>听歌</value>
+                <value>睡觉</value>
+                <value>打豆豆</value>
+            </list>
+        </property>
+<!--map-->
+        <property name="card">
+            <map>
+                <entry key="身份证" value="121242141"/>
+                <entry key="张三" value="12"/>
+            </map>
+
+        </property>
+        <!--Set-->
+<property name="games">
+    <set>
+        <value>lol</value>
+        <value>cf</value>
+    </set>
+</property>
+
+<!-- null-->
+        <property name="wife">
+            <null/>
+        </property>
+<!-- properties-->
+        <property name="info">
+            <props>
+                <prop key="学号">202006380607</prop>
+            </props>
+        </property>
+    </bean>
+
+
+</beans>

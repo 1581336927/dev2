@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--映射文件，namespace命名空间。对应一个完全的全限定名，只能有一个  id必须和接口中的方法名完全相同-->
+<mapper namespace="com.hcy.dao.StudentDao">
+
+    <select id="findId" resultType="student" parameterType="Integer">
+        select * from student where id=#{id}
+    </select>
+</mapper>

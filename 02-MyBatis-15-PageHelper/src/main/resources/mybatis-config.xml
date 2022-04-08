@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<!--MyBatis配置-->
+<configuration>
+
+    <plugins>
+        <!--pageHelper分页插件-->
+        <plugin interceptor="com.github.pagehelper.PageInterceptor">
+            <!--自动检测当前的数据库链接-->
+            <property name="helperDialect" value="mysql"/>
+
+            <!--分页合理化参数，小于0页显示第一页，大于最后一页显示最后一页-->
+            <property name="reasonable" value="true"/>
+        </plugin>
+    </plugins>
+
+    <!--JDBC环境配置、选中默认环境-->
+    <environments default="development">
+        <!--MySql数据库环境配置-->
+        <environment id="development">
+            <!--事务管理-->
+            <transactionManager type="JDBC"/>
+            <!--连接池相关配置-->
+            <dataSource type="com.hcy.util.DruidDataSourceFactory">
+                <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+                <property name="url" value="jdbc:mysql://localhost:3306/schema_name?useUnicode=true&amp;characterEncoding=UTF-8"/>
+                <property name="username" value="root"/>
+                <property name="password" value="123456"/>
+            </dataSource>
+        </environment>
+    </environments>
+    <!--Mapper注册-->
+    <mappers>
+        <!--注册Mapper文件的所在位置-->
+        <mapper resource="com/hcy/Mapper/StudentMapper.xml"/>
+    </mappers>
+</configuration>

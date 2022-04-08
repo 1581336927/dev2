@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean class="com.hcy.entity.Student" id="student"/>
+
+    <bean class="com.hcy.entity.ComplexType" id="complexType">
+        <property name="Objects">
+            <array>
+                <value>123</value>
+                <value>易烊千玺</value>
+                <value>True</value>
+                <value>帅</value>
+            </array>
+        </property>
+        <property name="list">
+            <list>
+                <value>营养快线</value>
+                <value>美的牙此拉着笑</value>
+                <value>旺仔牛奶</value>
+            </list>
+        </property>
+        <property name="set">
+            <set>
+                <value>1</value>
+                <value>2</value>
+            </set>
+        </property>
+        <property name="map">
+            <map>
+                <entry key="1" value="你好"/>
+                <entry key="2" value="美女"/>
+                <entry key="student" value-ref="student"/>
+            </map>
+        </property>
+    </bean>
+</beans>
