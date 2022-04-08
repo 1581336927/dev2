@@ -7,9 +7,73 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="02-Mybatis-02-More-Mapper" />
-        <module name="02-MyBatis-06-Alias" />
+        <module name="_05-springMVC-06-View" />
+        <module name="02_Mybatis-01-start" />
+        <module name="03-Spring-07-DI-03-ThirdLayerApplication" />
+        <module name="06-SSM-03-Prverty-alleviation" />
+        <module name="03-Spring-07-DI-04-Annation" />
+        <module name="03-Spring-08-JDBC-02-Annotation" />
+        <module name="02-MyBatis-17-Annotation" />
+        <module name="_05-SpringMVC-04-Filter" />
+        <module name="05-springMVC-10-FileUpload" />
+        <module name="_05-springMVC-07-Response" />
+        <module name="05-springMVC-13-ControllerAdvice" />
+        <module name="03-Spring-07-DI-02-complexType" />
+        <module name="02-MyBatis-14-Cache" />
+        <module name="03-Spring-04-Scope" />
+        <module name="02-MyBatis-11-ORM" />
+        <module name="02-MyBatis-18-Lazy" />
+        <module name="_06-SSM-01-Wyy" />
+        <module name="_07-JWT-01-Start" />
+        <module name="03-Spring-09-AOP-02-Annottation" />
+        <module name="03-Spring-07-Di" />
+        <module name="03-Spring-01-Start" />
+        <module name="05-springMVC-12-Excption" />
+        <module name="05-springMVC-14-Interceptor" />
+        <module name="03-Spring-01-Learn" />
+        <module name="_07-JWT-00-Session-Cookie" />
+        <module name="05-springMVC-01-Start" />
+        <module name="03-Spring-03-CreatBean" />
+        <module name="03-Spring-09-AOP-01-XML" />
+        <module name="_05-springMVC-05-Date" />
+        <module name="03-Spring-08-JDBC-01-xml" />
+        <module name="03-Spring-11-Test" />
+        <module name="05-springMVC-11-FileDownload" />
+        <module name="06-SSM-02-Pk" />
         <module name="02-MyBatis-07-log4j2" />
+        <module name="_07-JWT-04-Web" />
+        <module name="03-Spring-07-DI-01-Counstructor" />
+        <module name="02-Mybatis-13-Dynamic" />
+        <module name="02-MyBatis-19-last" />
+        <module name="02-MyBatis-08-Binding" />
+        <module name="02-MyBatis-10-util" />
+        <module name="02_Mybatis-02-start" />
+        <module name="_05-springMVC-02-RequestMapping" />
+        <module name="03-Spring-02-Bean" />
+        <module name="03-Spring-09-AOP-00-Start" />
+        <module name="02-MyBatis-12-More-Table" />
+        <module name="_03-Spring-00-ThreeLayerApplication" />
+        <module name="02-MyBatis-15-PageHelper" />
+        <module name="_05-SpringMVC-05-DataConverter" />
+        <module name="02-Mybatis-02-More-Mapper" />
+        <module name="05-springMVC-15-Jersey" />
+        <module name="02-MyBatis-09-CRUD" />
+        <module name="06-SSM-03-Poverty-alleviation" />
+        <module name="04-DesignPattern-01-prexy" />
+        <module name="03-Spring-10-Transaction-01-Programming" />
+        <module name="03-Spring-06-Lazy" />
+        <module name="03-Spring-Learn" />
+        <module name="03-Spring-05-Lifecyle" />
+        <module name="03-Spring-10-Transaction-04-Propagate" />
+        <module name="05-springMVC-9-Ajax" />
+        <module name="03-Spring-10-Transaction-03-Annotcation" />
+        <module name="_05-springMVC-03-Bean" />
+        <module name="03-Spring-10-Transaction-03-Annottaion" />
+        <module name="05-springMVC-16-CrossORigin" />
+        <module name="02-MyBatis-06-Alias" />
+        <module name="02-MyBatis-16-Druid" />
+        <module name="_05-springMVC-08-Annotcation" />
+        <module name="03-Spring-10-Transaction-02-XML" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -17,7 +81,71 @@
       <module name="02-Mybatis-02-More-Mapper" target="1.8" />
       <module name="02-MyBatis-06-Alias" target="1.8" />
       <module name="02-MyBatis-07-log4j2" target="1.8" />
+      <module name="02-MyBatis-08-Binding" target="1.8" />
+      <module name="02-MyBatis-09-CRUD" target="1.8" />
+      <module name="02-MyBatis-10-util" target="1.8" />
+      <module name="02-MyBatis-11-ORM" target="1.8" />
+      <module name="02-MyBatis-12-More-Table" target="1.8" />
+      <module name="02-Mybatis-13-Dynamic" target="1.8" />
+      <module name="02-MyBatis-14-Cache" target="1.8" />
+      <module name="02-MyBatis-15-PageHelper" target="1.8" />
+      <module name="02-MyBatis-16-Druid" target="1.8" />
+      <module name="02-MyBatis-17-Annotation" target="1.8" />
+      <module name="02-MyBatis-18-Lazy" target="1.8" />
+      <module name="02-MyBatis-19-last" target="1.8" />
+      <module name="02_Mybatis-01-start" target="1.8" />
+      <module name="02_Mybatis-02-start" target="1.8" />
+      <module name="03-Spring-01-Learn" target="1.8" />
+      <module name="03-Spring-01-Start" target="1.8" />
+      <module name="03-Spring-02-Bean" target="1.8" />
+      <module name="03-Spring-03-CreatBean" target="1.8" />
+      <module name="03-Spring-04-Scope" target="1.8" />
+      <module name="03-Spring-05-Lifecyle" target="1.8" />
+      <module name="03-Spring-06-Lazy" target="1.8" />
+      <module name="03-Spring-07-Di" target="1.8" />
+      <module name="03-Spring-07-DI-01-Counstructor" target="1.8" />
+      <module name="03-Spring-07-DI-02-complexType" target="1.8" />
+      <module name="03-Spring-07-DI-03-ThirdLayerApplication" target="1.8" />
+      <module name="03-Spring-07-DI-04-Annation" target="1.8" />
+      <module name="03-Spring-08-JDBC-01-xml" target="1.8" />
+      <module name="03-Spring-08-JDBC-02-Annotation" target="1.8" />
+      <module name="03-Spring-09-AOP-00-Start" target="1.8" />
+      <module name="03-Spring-09-AOP-01-XML" target="1.8" />
+      <module name="03-Spring-09-AOP-02-Annottation" target="1.8" />
+      <module name="03-Spring-10-Transaction-01-Programming" target="1.8" />
+      <module name="03-Spring-10-Transaction-02-XML" target="1.8" />
+      <module name="03-Spring-10-Transaction-03-Annotcation" target="1.8" />
+      <module name="03-Spring-10-Transaction-03-Annottaion" target="1.8" />
+      <module name="03-Spring-10-Transaction-04-Propagate" target="1.8" />
+      <module name="03-Spring-11-Test" target="1.8" />
+      <module name="03-Spring-Learn" target="1.8" />
+      <module name="04-DesignPattern-01-prexy" target="1.8" />
+      <module name="05-springMVC-01-Start" target="1.8" />
+      <module name="05-springMVC-10-FileUpload" target="1.8" />
+      <module name="05-springMVC-11-FileDownload" target="1.8" />
+      <module name="05-springMVC-12-Excption" target="1.8" />
+      <module name="05-springMVC-13-ControllerAdvice" target="1.8" />
+      <module name="05-springMVC-14-Interceptor" target="1.8" />
+      <module name="05-springMVC-15-Jersey" target="1.8" />
+      <module name="05-springMVC-16-CrossORigin" target="1.8" />
+      <module name="05-springMVC-9-Ajax" target="1.8" />
+      <module name="06-SSM-02-Pk" target="1.8" />
+      <module name="06-SSM-03-Poverty-alleviation" target="1.8" />
+      <module name="06-SSM-03-Prverty-alleviation" target="1.8" />
       <module name="_01-ThirdLayerApplication" target="1.8" />
+      <module name="_03-Spring-00-ThreeLayerApplication" target="1.8" />
+      <module name="_05-springMVC-02-RequestMapping" target="1.8" />
+      <module name="_05-springMVC-03-Bean" target="1.8" />
+      <module name="_05-SpringMVC-04-Filter" target="1.8" />
+      <module name="_05-SpringMVC-05-DataConverter" target="1.8" />
+      <module name="_05-springMVC-05-Date" target="1.8" />
+      <module name="_05-springMVC-06-View" target="1.8" />
+      <module name="_05-springMVC-07-Response" target="1.8" />
+      <module name="_05-springMVC-08-Annotcation" target="1.8" />
+      <module name="_06-SSM-01-Wyy" target="1.8" />
+      <module name="_07-JWT-00-Session-Cookie" target="1.8" />
+      <module name="_07-JWT-01-Start" target="1.8" />
+      <module name="_07-JWT-04-Web" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
