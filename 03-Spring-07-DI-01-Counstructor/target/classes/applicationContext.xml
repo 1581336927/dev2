@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <bean id="student" class="com.hcy.entity.Student">
+        <property name="name" value="小鹏p7"/>
+        <property name="age" value="22"/>
+    </bean>
+    <bean id="teacher" class="com.hcy.entity.Teacher">
+        <property name="name" value="老师"/>
+        <property name="age" value="66"/>
+        <property name="student" ref="student"/>
+    </bean>
+
+    <!--&lt;!&ndash;通过有参构造和下标进行赋值&ndash;&gt;-->
+    <!--    <bean class="com.hcy.entity.User" id="user">-->
+    <!--        <constructor-arg index="0" value="美丽的泡沫"/>-->
+    <!--    </bean>-->
+
+    <bean class="com.hcy.entity.User" id="user">
+        <constructor-arg type="java.lang.String" value="你是我的眼"/>
+    </bean>
+
+
+    <bean class="com.hcy.entity.UserT" id="userT">
+
+    </bean>
+</beans>

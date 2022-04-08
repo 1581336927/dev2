@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--映射文件，namespace命名空间。对应一个完全的全限定名，只能有一个  id必须和接口中的方法名完全相同-->
+<mapper namespace="com.hcy.dao.StudentDao">
+
+    <select id="findByKeyword" parameterType="String" resultType="com.hcy.entity.Student">
+        select * from student where name like #{keyword}
+    </select>
+
+    <insert id="getAutoIncrement" parameterType="Student" useGeneratedKeys="true" keyProperty="id">
+        insert into student (name,age,gender,birthday,info) values (#{name},#{age},#{gender},#{birthday},#{info})
+    </insert>
+</mapper>

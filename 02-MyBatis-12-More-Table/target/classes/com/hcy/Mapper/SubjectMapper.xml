@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--映射文件，namespace命名空间。对应一个完全的全限定名，只能有一个  id必须和接口中的方法名完全相同-->
+<mapper namespace="com.hcy.dao.SubjectDao">
+    <resultMap id="findAllMap" type="com.hcy.entity.Subject">
+        <id property="id" column="sub_id"/>
+        <result column="sub_name" property="name"/>
+
+        <collection property="students" resultMap="com.hcy.dao.StudentDao.findAllMap">
+
+        </collection>
+
+    </resultMap>
+
+    <select id="findAll" resultMap="findAllMap">
+        select stu.*, sub.id as sub_id, sub.name as sub_name
+        from subject sub
+                 inner join student_ref_subject as srs on srs.sub_id = sub.id
+                 inner join student stu on stu.id = srs.stu_id
+    </select>
+
+
+</mapper>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--init method指定的方法会在容器Spring创建之后立即执行-->
+    <bean  class="com.hcy.entity.Car" id="car">
+        <constructor-arg name="speed" type="java.lang.Float" value="100"/>
+        <constructor-arg name="color" type="java.lang.String" value="yellow"/>
+    </bean>
+
+    <bean class="com.hcy.entity.Person" id="person">
+        <constructor-arg name="name" type="java.lang.String" value="易烊千玺"/>
+        <constructor-arg name="age" type="java.lang.Byte" value="22"/>
+        <constructor-arg name="car" type="com.hcy.entity.Car" ref="car"/>
+    </bean>
+</beans>

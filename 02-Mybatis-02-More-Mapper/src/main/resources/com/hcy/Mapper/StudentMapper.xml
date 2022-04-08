@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--映射文件，namespace命名空间。对应一个完全的全限定名，只能有一个  id必须和接口中的方法名完全相同-->
+<mapper namespace="com.hcy.dao.StudentDao">
+
+    <select id="selectAge" resultType="com.hcy.entity.Student" parameterType="Integer">
+        select *
+        from student
+        where age &lt; #{age}
+    </select>
+    <select id="selectStuOne" resultType="com.hcy.entity.Student" parameterType="Integer">
+        select *
+        from student
+        where id = #{id}
+    </select>
+    <delete id="deleteStu" parameterType="Integer">
+        delete
+        from student
+        where id = #{id}
+    </delete>
+    <insert id="InsertStu">
+        insert into student (name, age, gender, birthday, info)
+        values ('林则徐', 50, '男', null, '231897')
+    </insert>
+    <update id="updateStu" parameterType="com.hcy.entity.Student">
+        update student
+        set name=#{name},
+            age=#{age},
+            gender=#{gender},
+            birthday=#{birthday},
+            info=#{info}
+        where id = #{id}
+    </update>
+    <insert id="insertStu2" parameterType="map">
+        insert into student (name, age, gender, birthday, info)
+        values (#{name}, #{age}, #{gender}, #{birthday}, #{info})
+    </insert>
+    <select id="getId" parameterType="String" resultType="student">
+        select *
+        from student
+        where name like "%"#{name}"%"
+    </select>
+
+<!--    如果实体类字段名和实体类匹配不一致，可以把数据库列名对应成实体类的是变量名。-->
+    <resultMap id="StudentMap" type="com.hcy.entity.Student">
+        <result column="id" property="id"/>
+        <result column="name" property="name"/>
+        <result column="age" property="age"/>
+        <result column="gender" property="gender"/>
+        <result column="birthday" property="birthday"/>
+        <result column="info" property="info"/>
+    </resultMap>
+    <select id="selectS" resultMap="StudentMap" parameterType="Integer">
+        select *
+        from student
+        where id = #{id}
+    </select>
+</mapper>

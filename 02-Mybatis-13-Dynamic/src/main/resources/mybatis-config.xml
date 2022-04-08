@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<!--mybatis环境配置-->
+<configuration>
+
+    <!--导入外部properties-->
+    <properties resource="jdbc.properties"/>
+
+    <settings>
+        <setting name="logImpl" value="STDOUT_LOGGING"/>
+    </settings>
+
+    <!--实体类的别名-->
+    <typeAliases>
+        <typeAlias type="com.hcy.entity.Student" alias="student"/>
+    </typeAliases>
+
+    <plugins>
+        <!--pageHelper分页插件-->
+        <plugin interceptor="com.github.pagehelper.PageInterceptor">
+            <!--自动检测当前的数据库链接-->
+            <property name="helperDialect" value="mysql"/>
+
+            <!--分页合理化参数，小于0页显示第一页，大于最后一页显示最后一页-->
+            <property name="reasonable" value="true"/>
+        </plugin>
+    </plugins>
+
+
+    <!--mybatis运行环境配置-->
+    <environments default="development">
+        <environment id="development">
+            <!--事务管理器环境配置-->
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <property name="driver" value="${jdbc.driver}"/>
+                <property name="url" value="${jdbc.url}"/>
+                <property name="username" value="${jdbc.username}"/>
+                <property name="password" value="${jdbc.password}"/>
+            </dataSource>
+        </environment>
+    </environments>
+    <!--指定映射文件-->
+    <mappers>
+        <mapper resource="com/hcy/Mapper/StudentMapper.xml"/>
+    </mappers>
+</configuration>

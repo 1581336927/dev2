@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean class="com.hcy.entity.Student" id="student"/>
+    <bean class="com.hcy.Factory.StudentFactory" id="factory"/>
+    <bean factory-bean="factory" factory-method="getStudent" id="student2"/>
+    <!--静态工厂对象-->
+    <bean class="com.hcy.Factory.StudentStaticFactory" factory-method="getStudent" id="student3"/>
+
+    <bean class="com.hcy.dao.UserServiceImpl" id="service">
+
+    </bean>
+
+    <bean class="com.hcy.service.UserService" id="userService">
+        <property name="userDao" ref="service"/>
+    </bean>
+</beans>
