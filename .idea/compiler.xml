@@ -53,11 +53,13 @@
         <module name="02-MyBatis-12-More-Table" />
         <module name="_03-Spring-00-ThreeLayerApplication" />
         <module name="02-MyBatis-15-PageHelper" />
+        <module name="_07-JWT-03-StartUtil" />
         <module name="_05-SpringMVC-05-DataConverter" />
         <module name="02-Mybatis-02-More-Mapper" />
         <module name="05-springMVC-15-Jersey" />
         <module name="02-MyBatis-09-CRUD" />
         <module name="06-SSM-03-Poverty-alleviation" />
+        <module name="07-JWT-02-Web" />
         <module name="04-DesignPattern-01-prexy" />
         <module name="03-Spring-10-Transaction-01-Programming" />
         <module name="03-Spring-06-Lazy" />
@@ -130,7 +132,9 @@
       <module name="05-springMVC-9-Ajax" target="1.8" />
       <module name="06-SSM-02-Pk" target="1.8" />
       <module name="06-SSM-03-Poverty-alleviation" target="1.8" />
+      <module name="06-SSM-03-Poverty-alleviation (1)" target="1.8" />
       <module name="06-SSM-03-Prverty-alleviation" target="1.8" />
+      <module name="07-JWT-02-Web" target="1.8" />
       <module name="_01-ThirdLayerApplication" target="1.8" />
       <module name="_03-Spring-00-ThreeLayerApplication" target="1.8" />
       <module name="_05-springMVC-02-RequestMapping" target="1.8" />
@@ -144,6 +148,7 @@
       <module name="_06-SSM-01-Wyy" target="1.8" />
       <module name="_07-JWT-00-Session-Cookie" target="1.8" />
       <module name="_07-JWT-01-Start" target="1.8" />
+      <module name="_07-JWT-03-StartUtil" target="1.8" />
       <module name="_07-JWT-04-Web" target="1.8" />
     </bytecodeTargetLevel>
   </component>

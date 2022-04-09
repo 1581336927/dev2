@@ -125,7 +125,7 @@
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="com.hcy.entity.MessageBoardWithBLOBs">
+  <insert id="insert" useGeneratedKeys="true" keyProperty="id" parameterType="com.hcy.entity.MessageBoardWithBLOBs">
     insert into message_board (id, create_time, user_id, 
       username, picture, reply_picture, 
       content, reply)

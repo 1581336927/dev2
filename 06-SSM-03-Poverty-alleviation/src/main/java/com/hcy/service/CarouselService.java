@@ -11,4 +11,6 @@ public interface CarouselService {
     ResultVo update(Carousel carousel);
 
     ResultVo delete(Integer id);
+
+    ResultVo changeStatus(Integer id);
 }

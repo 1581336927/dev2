@@ -1,7 +1,10 @@
 package com.hcy.entity;
 
+import org.springframework.stereotype.Component;
+
 import java.util.Date;
 
+@Component
 public class Alleviation {
     private Long id;
 

@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.hcy.dao.PoorMapper">
+  <update id="click">
+    update poor
+    set click_num       = click_num + 1,
+        last_click_time = #{lastClickTime}
+    where id = #{id}
+  </update>
   <resultMap id="BaseResultMap" type="com.hcy.entity.Poor">
     <id column="id" jdbcType="BIGINT" property="id" />
     <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
@@ -84,7 +90,7 @@
     last_click_time, click_num
   </sql>
   <sql id="Blob_Column_List">
-    condition, introduce, reply
+    `condition`, introduce,reply
   </sql>
   <select id="selectByExampleWithBLOBs" parameterType="com.hcy.entity.PoorExample" resultMap="ResultMapWithBLOBs">
     select
@@ -134,12 +140,12 @@
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="com.hcy.entity.PoorWithBLOBs">
+  <insert id="insert" useGeneratedKeys="true" keyProperty="id" parameterType="com.hcy.entity.PoorWithBLOBs">
     insert into poor (id, create_time, sn, 
       member, number, address, 
       cover, income, username, 
       name, audit, last_click_time, 
-      click_num, condition, introduce, 
+      click_num, `condition`, introduce,
       reply)
     values (#{id,jdbcType=BIGINT}, #{createTime,jdbcType=TIMESTAMP}, #{sn,jdbcType=VARCHAR}, 
       #{member,jdbcType=VARCHAR}, #{number,jdbcType=INTEGER}, #{address,jdbcType=VARCHAR}, 
@@ -148,7 +154,7 @@
       #{clickNum,jdbcType=INTEGER}, #{condition,jdbcType=LONGVARCHAR}, #{introduce,jdbcType=LONGVARCHAR}, 
       #{reply,jdbcType=LONGVARCHAR})
   </insert>
-  <insert id="insertSelective" parameterType="com.hcy.entity.PoorWithBLOBs">
+  <insert id="insertSelective" useGeneratedKeys="true" keyProperty="id" parameterType="com.hcy.entity.PoorWithBLOBs">
     insert into poor
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="id != null">
@@ -328,7 +334,7 @@
       audit = #{record.audit,jdbcType=VARCHAR},
       last_click_time = #{record.lastClickTime,jdbcType=TIMESTAMP},
       click_num = #{record.clickNum,jdbcType=INTEGER},
-      condition = #{record.condition,jdbcType=LONGVARCHAR},
+      `condition` = #{record.condition,jdbcType=LONGVARCHAR},
       introduce = #{record.introduce,jdbcType=LONGVARCHAR},
       reply = #{record.reply,jdbcType=LONGVARCHAR}
     <if test="_parameter != null">

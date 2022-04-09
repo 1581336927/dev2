@@ -1,5 +1,7 @@
 package com.hcy.entity;
 
+import com.hcy.vo.ResultVo;
+
 import java.util.Date;
 
 public class VolunteerRecruitment {
@@ -172,4 +174,6 @@ public class VolunteerRecruitment {
     public void setWorkRequire(String workRequire) {
         this.workRequire = workRequire == null ? null : workRequire.trim();
     }
+
+
 }

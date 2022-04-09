@@ -3,6 +3,8 @@ package com.hcy.dao;
 import com.hcy.entity.Poor;
 import com.hcy.entity.PoorExample;
 import com.hcy.entity.PoorWithBLOBs;
+
+import java.util.Date;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
 
@@ -34,4 +36,7 @@ public interface PoorMapper {
     int updateByPrimaryKeyWithBLOBs(PoorWithBLOBs record);
 
     int updateByPrimaryKey(Poor record);
+
+    // 加1
+    Integer click(@Param("id") Long id, @Param("lastClickTime") Date lastClickTime);
 }

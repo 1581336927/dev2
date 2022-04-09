@@ -31,6 +31,7 @@ public class UserController {
     public ResultVo update(@RequestBody User user){
         return userService.update(user);
     }
+
     @GetMapping("delete")
     public ResultVo delete(@RequestParam Long id){
         return userService.delete(id);

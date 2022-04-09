@@ -125,4 +125,21 @@ public class CarouselServiceImpl implements CarouselService {
 
         return vo;
     }
+
+    @Override
+    public ResultVo changeStatus(Integer id) {
+
+        Integer affectedRows=carouselMapper.changeStatus(id);
+
+        ResultVo vo;
+
+        if (affectedRows > 0) {
+
+            vo = new ResultVo(1000, "修改当前状态成功！！", true, null);
+        } else {
+            vo = new ResultVo(5000, "修改当前状态失败！！", false, null);
+        }
+
+        return vo;
+    }
 }

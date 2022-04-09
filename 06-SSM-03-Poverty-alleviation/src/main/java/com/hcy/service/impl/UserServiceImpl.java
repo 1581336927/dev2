@@ -34,7 +34,7 @@ public class UserServiceImpl implements UserService {
             users = new ArrayList<>();
             //查询
             User user = userMapper.selectByPrimaryKey(id);
-            //如果查到用户的情况
+            //如果没有查到用户的情况
             if (user == null) {
                 userDataVo = new DataVo<>(0L, users, pageNum, pageSize);
 

@@ -27,4 +27,6 @@ public interface CarouselMapper {
     int updateByPrimaryKeySelective(Carousel record);
 
     int updateByPrimaryKey(Carousel record);
+
+    Integer changeStatus(@Param("id") Integer id);
 }
