@@ -36,6 +36,7 @@ public class CarouselController {
     public ResultVo update(@RequestBody Carousel carousel){
         return carouselService.update(carousel);
     }
+
     @GetMapping("delete")
     public ResultVo delete(@RequestParam Integer id){
         return carouselService.delete(id);

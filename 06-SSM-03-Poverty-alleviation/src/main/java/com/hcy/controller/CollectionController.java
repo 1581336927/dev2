@@ -10,9 +10,10 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("collection")
 public class CollectionController {
+
     @Autowired
     private CollectionService collectionService;
-    @GetMapping("getList")
+    @GetMapping("getlist")
     private ResultVo getList(@RequestParam(value = "pageNum",defaultValue = "1") Integer pageNum,
                              @RequestParam(value = "pageSize",defaultValue = "5") Integer pageSize,
                              Long id){
@@ -22,10 +23,12 @@ public class CollectionController {
     public ResultVo insert(@RequestBody Collection collection){
         return collectionService.insert(collection);
     }
+
     @PostMapping("update")
     public ResultVo update(@RequestBody Collection collection){
         return  collectionService.update(collection);
     }
+
     @GetMapping("delete")
     public  ResultVo delete(@RequestParam("id") Long id){
         return  collectionService.delete(id);

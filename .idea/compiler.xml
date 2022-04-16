@@ -17,6 +17,7 @@
         <module name="05-springMVC-10-FileUpload" />
         <module name="_05-springMVC-07-Response" />
         <module name="05-springMVC-13-ControllerAdvice" />
+        <module name="08-SpringBoot-00-Starter" />
         <module name="03-Spring-07-DI-02-complexType" />
         <module name="02-MyBatis-14-Cache" />
         <module name="03-Spring-04-Scope" />
@@ -29,6 +30,7 @@
         <module name="03-Spring-01-Start" />
         <module name="05-springMVC-12-Excption" />
         <module name="05-springMVC-14-Interceptor" />
+        <module name="07-JWT-05-Interceptor" />
         <module name="03-Spring-01-Learn" />
         <module name="_07-JWT-00-Session-Cookie" />
         <module name="05-springMVC-01-Start" />
@@ -45,6 +47,7 @@
         <module name="02-Mybatis-13-Dynamic" />
         <module name="02-MyBatis-19-last" />
         <module name="02-MyBatis-08-Binding" />
+        <module name="06-SSM-04-Cloud-Diary" />
         <module name="02-MyBatis-10-util" />
         <module name="02_Mybatis-02-start" />
         <module name="_05-springMVC-02-RequestMapping" />
@@ -75,6 +78,7 @@
         <module name="02-MyBatis-16-Druid" />
         <module name="_05-springMVC-08-Annotcation" />
         <module name="03-Spring-10-Transaction-02-XML" />
+        <module name="07-JWT-06-CustomJwt" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -134,7 +138,11 @@
       <module name="06-SSM-03-Poverty-alleviation" target="1.8" />
       <module name="06-SSM-03-Poverty-alleviation (1)" target="1.8" />
       <module name="06-SSM-03-Prverty-alleviation" target="1.8" />
+      <module name="06-SSM-04-Cloud-Diary" target="1.8" />
       <module name="07-JWT-02-Web" target="1.8" />
+      <module name="07-JWT-05-Interceptor" target="1.8" />
+      <module name="07-JWT-06-CustomJwt" target="1.8" />
+      <module name="08-SpringBoot-00-Starter" target="1.8" />
       <module name="_01-ThirdLayerApplication" target="1.8" />
       <module name="_03-Spring-00-ThreeLayerApplication" target="1.8" />
       <module name="_05-springMVC-02-RequestMapping" target="1.8" />
@@ -150,6 +158,12 @@
       <module name="_07-JWT-01-Start" target="1.8" />
       <module name="_07-JWT-03-StartUtil" target="1.8" />
       <module name="_07-JWT-04-Web" target="1.8" />
+      <module name="_07-JWT-06-CustomJwt" target="1.8" />
     </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="08-SpringBoot-00-Starter" options="-parameters" />
+    </option>
   </component>
 </project>

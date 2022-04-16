@@ -31,7 +31,7 @@ public class FileUploadController {
         String filename = upload.getOriginalFilename();
 
         try {
-            // 如果文件名称不为空
+            // 如果文件名称不为空id
             if (filename != null) {
                 // 完成文件上传
                 upload.transferTo(new File(path, filename));

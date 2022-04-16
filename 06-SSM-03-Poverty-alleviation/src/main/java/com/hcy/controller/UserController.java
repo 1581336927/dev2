@@ -5,7 +5,6 @@ import com.hcy.vo.ResultVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import com.hcy.entity.User;
-import javax.annotation.PostConstruct;
 
 
 @RestController
@@ -36,4 +35,10 @@ public class UserController {
     public ResultVo delete(@RequestParam Long id){
         return userService.delete(id);
     }
+
+    @GetMapping("like")
+    public ResultVo selectLike(String params){
+        return userService.selectLike(params);
+    }
+
 }

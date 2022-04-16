@@ -125,7 +125,7 @@ public class PoorServiceImpl implements PoorService {
     @Override
     public ResultVo update(PoorWithBLOBs poor) {
         ResultVo vo;
-        int affectedRows = poorMapper.updateByPrimaryKeySelective(poor);
+        int affectedRows = poorMapper.updateByPrimaryKeyWithBLOBs(poor);
         if (affectedRows > 0) {
 
             poor = poorMapper.selectByPrimaryKey(poor.getId());

@@ -9,6 +9,10 @@ import com.hcy.vo.DataVo;
 import com.hcy.vo.ResultVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
+
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -74,17 +78,14 @@ public class UserServiceImpl implements UserService {
     @Override
     public ResultVo add(User user) {
         ResultVo resultVo;
-        //判断是否存在创建时间，没有就添加
-        if (user.getCreateTime()==null){
-            user.setCreateTime(new Date());
-        }
+
         //受影响的行数
         int affectedRows = userMapper.insertSelective(user);
         //判断受影响的行数
-        if (affectedRows>0){
-            resultVo=new ResultVo(1000,"添加用户成功",true,user);
-        }else {
-            resultVo=new ResultVo(5000,"添加用户失败",false,null);
+        if (affectedRows > 0) {
+            resultVo = new ResultVo(1000, "添加用户成功", true, user);
+        } else {
+            resultVo = new ResultVo(5000, "添加用户失败", false, null);
         }
         //返回结果集
         return resultVo;
@@ -122,4 +123,24 @@ public class UserServiceImpl implements UserService {
 
         return vo;
     }
+
+    @Override
+    public ResultVo selectLike(String params) {
+        ResultVo resultVo;
+        if (params == null) {
+            resultVo = new ResultVo(4100, "请输入参数", false, null);
+        } else {
+            List<User> users = userMapper.selectLike("%" + params + "%");
+
+            if (users.size() == 0) {
+
+                resultVo = new ResultVo(4100, "暂无数据", false, null);
+            } else {
+                resultVo = new ResultVo(200, "查到了数据", true, users);
+            }
+
+        }
+        return resultVo;
+    }
 }
+

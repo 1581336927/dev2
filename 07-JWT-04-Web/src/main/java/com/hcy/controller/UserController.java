@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -20,7 +21,7 @@ public class UserController {
 
     @RequestMapping("login")
     public Map<String, Object> login(User user) {
-        UserVO userVO = userService.Login(user.getUsername(), user.getPassword());
+        UserVO userVO = userService.login(user.getUsername(), user.getPassword());
         Map<String, Object> map = new HashMap<>();
         if (userVO != null) {
             map.put("code", 200);
@@ -42,6 +43,17 @@ public class UserController {
             map.put("message", "登录失败！！");
             map.put("data", null);
         }
+
+        return map;
+    }
+
+    @RequestMapping("verify")
+    public Map<String, Object> verify(HttpServletRequest request) {
+        Map<String, Object> map = new HashMap<>();
+        map.put("code", 200);
+        map.put("success", true);
+        map.put("message", "验证成功！");
+        map.put("data", request.getAttribute("claim"));
 
         return map;
     }

@@ -12,7 +12,7 @@ public class Message_Board {
     @Autowired
     private MsgBoardService msgBoardService;
 
-    @GetMapping("getList")
+    @GetMapping("getlist")
     public ResultVo getList(@RequestParam(value = "pageNum", defaultValue = "1") Integer pageNum,
                             @RequestParam(value = "pageSize", defaultValue = "5") Integer pageSize,
                             Long id) {

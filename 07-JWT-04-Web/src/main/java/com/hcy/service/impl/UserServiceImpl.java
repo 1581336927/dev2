@@ -10,8 +10,9 @@ import java.util.Date;
 public class UserServiceImpl implements UserService {
 
     @Override
-    public UserVO Login(String username, String password) {
-        UserVO userVO=null;
+    public UserVO login(String username, String password) {
+        UserVO userVO = null;
+
         // 登录成功
         if (username.equals("易烊千玺") && password.equals("123456")) {
             userVO = new UserVO();
@@ -19,6 +20,7 @@ public class UserServiceImpl implements UserService {
             userVO.setUsername(username);
             userVO.setLastAccessTime(new Date());
         }
+
         return userVO;
     }
 }

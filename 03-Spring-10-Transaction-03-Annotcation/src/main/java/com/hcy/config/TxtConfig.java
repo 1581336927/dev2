@@ -1,4 +1,4 @@
-package com.fc.config;
+package com.hcy.config;
 
 import com.alibaba.druid.pool.DruidDataSourceFactory;
 

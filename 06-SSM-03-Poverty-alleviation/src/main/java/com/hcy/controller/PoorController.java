@@ -13,7 +13,7 @@ public class PoorController {
     @Autowired
     private PoorService poorService;
 
-    @GetMapping("getList")
+    @GetMapping("getlist")
     public ResultVo getList(@RequestParam(value = "pageNum",defaultValue = "1")Integer pageNum,
                             @RequestParam(value = "pageSize",defaultValue = "5")Integer pageSize,
                             Long id){

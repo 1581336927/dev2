@@ -425,7 +425,7 @@
       audit = #{audit,jdbcType=VARCHAR},
       last_click_time = #{lastClickTime,jdbcType=TIMESTAMP},
       click_num = #{clickNum,jdbcType=INTEGER},
-      condition = #{condition,jdbcType=LONGVARCHAR},
+      `condition` = #{condition,jdbcType=LONGVARCHAR},
       introduce = #{introduce,jdbcType=LONGVARCHAR},
       reply = #{reply,jdbcType=LONGVARCHAR}
     where id = #{id,jdbcType=BIGINT}
