@@ -1,0 +1,9 @@
+#生产环境
+server:
+  port: 8888
+  servlet:
+    context-path: /product
+
+student:
+  name: 马儿扎哈
+  age: 33

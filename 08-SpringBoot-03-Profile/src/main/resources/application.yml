@@ -1,0 +1,4 @@
+#全局环境
+spring:
+  profiles:
+    active: product

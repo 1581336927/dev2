@@ -1,0 +1,10 @@
+#开发环境
+server:
+  port: 8080
+  servlet:
+    context-path: /dev
+
+
+student:
+  name: 古力娜扎
+  age: 33
