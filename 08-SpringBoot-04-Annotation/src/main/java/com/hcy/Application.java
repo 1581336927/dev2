@@ -2,6 +2,7 @@ package com.hcy;
 
 import com.hcy.config.TestConfig;
 import com.hcy.entity.Car;
+import com.hcy.entity.Cat;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -43,6 +44,12 @@ public class Application {
         Car car = applicationContext.getBean("car2", Car.class);
         System.out.println(car);
 
+
+        System.out.println("========================");
+
+        Cat cat = applicationContext.getBean("com.hcy.entity.Cat",Cat.class);
+
+        System.out.println("从容其中拿到的猫"+cat);
     }
 
 }

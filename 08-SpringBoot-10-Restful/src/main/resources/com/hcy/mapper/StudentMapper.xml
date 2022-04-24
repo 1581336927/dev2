@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--映射文件，namespace命名空间。对应一个完全的全限定名，只能有一个  id必须和接口中的方法名完全相同-->
+<mapper namespace="com.hcy.dao.StudentDao">
+    <!--二级缓存分开关-->
+    <cache/>
+    <select id="findAll" resultType="student">
+        select *
+        from student
+    </select>
+
+    <insert id="insert">
+        insert into student(name,age,gender,info) values (#{name},#{age},#{gender},#{info})
+    </insert>
+
+    <update id="update">
+        update student set info=#{info} where id=#{id}
+    </update>
+
+    <delete id="delete">
+        delete student where id=#{id}
+    </delete>
+</mapper>

@@ -1,0 +1,9 @@
+#\u914D\u7F6E\u6570\u636E\u6E90
+spring:
+  datasource:
+    #\u914D\u7F6E\u9ED8\u8BA4\u6570\u636E\u6E90
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/rx06?useSSL=false&useUnicode=true&characterEncoding=UTF-8&serverTimeZone=GTM+8
+    username: root
+    password: 123456

@@ -7,6 +7,8 @@ import com.hcy.entity.User;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+import javax.annotation.PostConstruct;
+
 
 //此注解表示当前类是一个配置类，是否开启代理对象
 @Configuration(proxyBeanMethods = false)
@@ -38,5 +40,12 @@ public class TestConfig {
     public String test(){
         System.out.println("李豪爱蜥蜴");
         return "一次三秒";
+    }
+    //构造方法执行后此方法执行
+    //只要是javaweb都能使用此注解
+    @PostConstruct
+    public  void  init(){
+
+        System.out.println("初始化方法执行");
     }
 }
