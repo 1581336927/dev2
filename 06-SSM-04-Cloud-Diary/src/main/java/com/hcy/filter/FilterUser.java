@@ -35,7 +35,7 @@ public class FilterUser implements Filter {
         } else if (session == null) {
 
             // 重定向登陆页面
-            response.sendRedirect("login.jsp");
+            response.sendRedirect("/login.jsp");
 
             //session不为空，并且user参数也不为空
         } else if (session.getAttribute("user") != null) {
@@ -44,7 +44,7 @@ public class FilterUser implements Filter {
             chain.doFilter(request, response);
         } else {
             // 跳转到登录页
-            response.sendRedirect("login.jsp");
+            response.sendRedirect("/login.jsp");
         }
     }
 

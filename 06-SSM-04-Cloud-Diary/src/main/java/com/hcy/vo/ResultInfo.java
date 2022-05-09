@@ -12,7 +12,6 @@ import java.util.List;
 @NoArgsConstructor
 @Component
 public class ResultInfo {
-
     private Integer code;
     private String message;
     private Object data;

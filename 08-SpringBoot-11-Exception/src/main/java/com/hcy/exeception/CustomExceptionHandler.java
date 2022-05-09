@@ -5,6 +5,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
+import org.springframework.web.servlet.ModelAndView;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -27,15 +28,13 @@ public class CustomExceptionHandler {
 
     @ExceptionHandler(Exception.class)
     @ResponseStatus(HttpStatus.BAD_REQUEST)
-    public Map<String, Object> handlerSystem(Exception e) {
-        Map<String, Object> map = new HashMap<>();
+    public ModelAndView handlerSystem(Exception e) {
+        ModelAndView view = new ModelAndView();
 
-        map.put("code", HttpStatus.BAD_REQUEST);
-        map.put("message", "发生了系统异常");
-        map.put("success", false);
-        map.put("data", e.getMessage());
+        view.setViewName("/error/**");
 
-        return map;
+        return view;
     }
+
 
 }

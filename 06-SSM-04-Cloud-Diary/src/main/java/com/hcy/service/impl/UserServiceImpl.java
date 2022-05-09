@@ -5,17 +5,19 @@ import com.hcy.entity.TbUser;
 import com.hcy.service.UserService;
 import com.hcy.vo.ResultInfo;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
-import javax.servlet.ServletException;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import java.io.File;
 import java.io.IOException;
-import java.util.HashMap;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.List;
 
 @Service
 public class UserServiceImpl implements UserService {
@@ -85,14 +87,9 @@ public class UserServiceImpl implements UserService {
             response.addCookie(cookie);
 
         }
-//        try {
-//            //重定向至登陆页面
-//            response.sendRedirect("login.jsp");
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
 
-        view.setViewName("/login.jsp");
+
+        view.setViewName("redirect:/login.jsp");
 
         return view;
     }
@@ -100,7 +97,101 @@ public class UserServiceImpl implements UserService {
     @Override
     public ModelAndView userCenter(HttpServletRequest request, HttpServletResponse response) {
 
+        ModelAndView view = new ModelAndView();
+        //获取session这里注意需要参数false
+        HttpSession session = request.getSession(false);
+        //拿到session域对象中强转为TbUser实体类
+        TbUser user = (TbUser) session.getAttribute("user");
+        //设置请求域对象
+        request.setAttribute("menu_page", user);
+        request.setAttribute("changePage", "/user/info.jsp");
+        //转发页面
+        view.setViewName("forward:/index.jsp");
 
-        return null;
+        return view;
     }
+
+    @Override
+    public ModelAndView updateUser(MultipartFile file, HttpServletRequest request, String nick, String mood) {
+
+        ModelAndView view = new ModelAndView();
+
+        HttpSession session = request.getSession(false);
+
+        TbUser user = (TbUser) session.getAttribute("user");
+        if (!file.isEmpty()) {
+
+            //准备文件存储的路径
+            String path = "C:\\Users\\HCY\\Desktop\\JavaMd\\15_Tomcat\\apache-tomcat2-8.5.37\\webapps\\upload\\poverty-Alleviation\\";
+
+            File pathFile = new File(path);
+
+            if (!pathFile.exists()) {
+                //创建多级路径
+                pathFile.mkdirs();
+            }
+
+            //获取原始的文件名
+            String originalFilename = file.getOriginalFilename();
+
+            //获取时间的格式化器
+            SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMddHHmmssSSS");
+
+            //获取格式化之后的当前日期时间
+            String format = formatter.format(new Date());
+
+            //获取文件的后缀名
+            String suufix = originalFilename.substring(originalFilename.lastIndexOf("."));
+
+            //新的文件名等于格式化之后的日期时间加上后缀名
+            originalFilename = format + suufix;
+
+            System.out.println(originalFilename);
+
+            Integer integer = userMapper.updateImg(originalFilename, user.getId());
+
+            if (integer>0){
+                view.setViewName("forward:/index.jsp");
+            }
+
+
+            try {
+                //文件上传操作
+                file.transferTo(new File(pathFile, originalFilename));
+            } catch (IOException e) {
+                e.printStackTrace();
+
+            }
+
+        } else {
+
+            Integer inffectedRows = userMapper.update(nick, mood, user.getId());
+
+            System.out.println(inffectedRows);
+
+
+            view.setViewName("forward:/index.jsp");
+
+            TbUser tbUser = userMapper.selectByPrimaryKey(user.getId());
+
+            session.setAttribute("user", tbUser);
+
+        }
+        return view;
+
+    }
+
+    @Override
+    public Integer checkNick(String nick) {
+
+        List<TbUser> list = userMapper.selectNick(nick);
+
+        if (list!=null){
+            return 0;
+        }else {
+
+            return 1;
+        }
+    }
+
 }

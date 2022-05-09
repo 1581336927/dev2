@@ -27,4 +27,11 @@ public interface TbNoteTypeMapper {
     int updateByPrimaryKeySelective(TbNoteType record);
 
     int updateByPrimaryKey(TbNoteType record);
+
+    List<TbNoteType> selectType(@Param("id")Integer id);
+
+    Integer insertType(@Param("type_name")String typename,@Param("userId")Integer userId);
+
+    Integer updateType(@Param("type_name") String typename,@Param("userId") Integer userId,@Param("id") Integer id);
+
 }

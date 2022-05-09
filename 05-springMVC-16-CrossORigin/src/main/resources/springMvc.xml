@@ -16,9 +16,16 @@
     <mvc:default-servlet-handler/>
 
     <mvc:annotation-driven/>
-<!--    &lt;!&ndash;跨域配置&ndash;&gt;-->
+    <!--跨域配置-->
 <!--    <mvc:cors>-->
 <!--        <mvc:mapping allowed-origins="*" path="/crossOrigin/*"/>-->
 <!--    </mvc:cors>-->
 
+<!--配置跨域拦截器-->
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <mvc:mapping path="/**"/>
+            <bean class="com.hcy.incerceptor.CrossInterceptor"/>
+        </mvc:interceptor>
+    </mvc:interceptors>
 </beans>

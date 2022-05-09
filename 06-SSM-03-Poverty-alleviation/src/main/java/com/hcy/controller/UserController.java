@@ -41,4 +41,8 @@ public class UserController {
         return userService.selectLike(params);
     }
 
+    @PostMapping("login")
+    public ResultVo login(@RequestParam String username,@RequestParam String password){
+       return userService.login(username,password);
+    }
 }

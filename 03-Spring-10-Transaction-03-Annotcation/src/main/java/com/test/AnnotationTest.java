@@ -1,6 +1,6 @@
 package com.test;
 
-import com.fc.config.TxtConfig;
+import com.hcy.config.TxtConfig;
 import com.hcy.service.AccountService;
 import com.hcy.service.impl.AccountServiceImpl;
 import org.junit.Test;

@@ -1,6 +1,8 @@
 package com.hcy.service;
 
+import com.hcy.entity.TbUser;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
@@ -15,4 +17,8 @@ public interface UserService {
 
 
     ModelAndView userCenter(HttpServletRequest request, HttpServletResponse response);
+
+    ModelAndView updateUser(MultipartFile file,HttpServletRequest request, String nick, String mood);
+
+    Integer checkNick(String nick);
 }

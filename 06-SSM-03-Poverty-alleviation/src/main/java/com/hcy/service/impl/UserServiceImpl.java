@@ -1,21 +1,19 @@
 package com.hcy.service.impl;
 
+import com.auth0.jwt.JWT;
+import com.auth0.jwt.algorithms.Algorithm;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.hcy.dao.UserMapper;
 import com.hcy.entity.User;
+import com.hcy.entity.UserExample;
 import com.hcy.service.UserService;
 import com.hcy.vo.DataVo;
 import com.hcy.vo.ResultVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.multipart.MultipartFile;
 
-import java.io.File;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 
 @Service
 public class UserServiceImpl implements UserService {
@@ -141,6 +139,72 @@ public class UserServiceImpl implements UserService {
 
         }
         return resultVo;
+    }
+
+    @Override
+    public ResultVo login(String username, String password) {
+        ResultVo vo = new ResultVo();
+        vo.setCode(-1);
+        vo.setMessage("登陆失败");
+        vo.setSuccess(false);
+        vo.setData(null);
+
+        UserExample example = new UserExample();
+
+        UserExample.Criteria criteria = example.createCriteria();
+
+        criteria.andUsernameEqualTo(username);
+
+        List<User> users = userMapper.selectByExample(example);
+
+        if (users.size() > 0) {
+            User user = users.get(0);
+
+            if (user.getPassword().equals(password)) {
+                vo.setSuccess(true);
+                vo.setMessage("登陆成功");
+                vo.setCode(1);
+                user.setPassword(null);
+
+                //盐值
+                String salt=String.valueOf((int)((Math.random()*9+1)*100000));
+
+
+                Map<String, Object> headers = new HashMap<>();
+
+                headers.put("alg", "HS256");
+
+                headers.put("typ", "JWT");
+
+                String token = JWT.create()
+                        .withHeader(headers)
+                        //主题
+                        .withSubject("登陆权限验证")
+                        //签发着
+                        .withIssuer("admin")
+                        //签发着日期
+                        .withIssuedAt(new Date())
+                        //过期时间
+                        .withExpiresAt(new Date(System.currentTimeMillis() + 1000 * 24))
+                        .withClaim("id", user.getId())
+                        .withClaim("salt", salt)
+                        .withClaim("username", user.getUsername())
+                        //使用盐值进行签发
+                        .sign(Algorithm.HMAC256(salt));
+
+                Map<String, Object> result = new HashMap<>();
+
+                result.put("user",user);
+                result.put("token",token);
+
+                vo.setData(result);
+            } else {
+                vo.setCode(-2);
+                vo.setMessage("登陆失败，请检查用户名和密码");
+
+            }
+        }
+        return vo;
     }
 }
 

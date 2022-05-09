@@ -10,63 +10,36 @@
         <module name="05-springMVC-08-Annotcation" />
         <module name="05-springMVC-02-RequestMapping" />
         <module name="07-JWT-01-Start" />
-        <module name="02_Mybatis-01-start" />
         <module name="03-Spring-07-DI-03-ThirdLayerApplication" />
         <module name="03-Spring-07-DI-04-Annation" />
-        <module name="03-Spring-08-JDBC-02-Annotation" />
-        <module name="08-SpringBoot-06-StaticResources" />
-        <module name="05-springMVC-05-Date" />
         <module name="02-MyBatis-17-Annotation" />
-        <module name="05-springMVC-10-FileUpload" />
-        <module name="05-springMVC-13-ControllerAdvice" />
-        <module name="08-SpringBoot-00-Starter" />
-        <module name="03-Spring-07-DI-02-complexType" />
         <module name="02-MyBatis-14-Cache" />
-        <module name="03-Spring-04-Scope" />
-        <module name="05-springMVC-06-View" />
         <module name="02-MyBatis-11-ORM" />
         <module name="02-MyBatis-18-Lazy" />
+        <module name="09-SpringBoot-01-Cloud-Diary" />
         <module name="03-Spring-09-AOP-02-Annottation" />
-        <module name="03-Spring-07-Di" />
+        <module name="08-SpringBoot-15-CrossOrigin" />
         <module name="08-SpringBoot-08-JdbcTemplate" />
-        <module name="03-Spring-01-Start" />
-        <module name="05-springMVC-12-Excption" />
         <module name="05-springMVC-14-Interceptor" />
+        <module name="10-Swagger-02-SpringBoot" />
         <module name="07-JWT-05-Interceptor" />
-        <module name="03-Spring-01-Learn" />
         <module name="05-springMVC-01-Start" />
-        <module name="03-Spring-03-CreatBean" />
-        <module name="03-Spring-09-AOP-01-XML" />
         <module name="08-SpringBoot-01-Starter" />
-        <module name="03-Spring-08-JDBC-01-xml" />
         <module name="03-Spring-11-Test" />
-        <module name="05-springMVC-11-FileDownload" />
-        <module name="06-SSM-02-Pk" />
         <module name="08-SpringBoot-07-Jsp" />
         <module name="02-MyBatis-07-log4j2" />
         <module name="03-Spring-07-DI-01-Counstructor" />
-        <module name="02-Mybatis-13-Dynamic" />
-        <module name="03-Spring-00-ThreeLayerApplication" />
         <module name="02-MyBatis-19-last" />
-        <module name="02-MyBatis-08-Binding" />
-        <module name="06-SSM-04-Cloud-Diary" />
         <module name="02-MyBatis-10-util" />
         <module name="02_Mybatis-02-start" />
+        <module name="08-SpringBoot-14-FileUpload" />
         <module name="03-Spring-02-Bean" />
         <module name="03-Spring-09-AOP-00-Start" />
-        <module name="02-MyBatis-12-More-Table" />
-        <module name="05-springMVC-03-Bean" />
-        <module name="02-MyBatis-15-PageHelper" />
-        <module name="05-SpringMVC-04-Filter" />
-        <module name="_07-JWT-03-StartUtil" />
         <module name="02-Mybatis-02-More-Mapper" />
-        <module name="05-springMVC-15-Jersey" />
         <module name="02-MyBatis-09-CRUD" />
         <module name="08-SpringBoot-12-Filter" />
         <module name="06-SSM-03-Poverty-alleviation" />
-        <module name="07-JWT-02-Web" />
         <module name="05-SpringMVC-05-DataConverter" />
-        <module name="06-SSM-01-Wyy" />
         <module name="04-DesignPattern-01-prexy" />
         <module name="08-SpringBoot-09-MyBatis" />
         <module name="03-Spring-10-Transaction-01-Programming" />
@@ -74,23 +47,65 @@
         <module name="03-Spring-Learn" />
         <module name="05-springMVC-07-Response" />
         <module name="03-Spring-05-Lifecyle" />
+        <module name="05-springMVC-16-CrossORigin" />
+        <module name="02-MyBatis-06-Alias" />
+        <module name="08-SpringBoot-16-i18n" />
+        <module name="07-JWT-03-StartUtil" />
+        <module name="08-SpringBoot-21-Jasypt" />
+        <module name="08-SpringBoot-13-Interceptor" />
+        <module name="07-JWT-06-CustomJwt" />
+        <module name="02_Mybatis-01-start" />
+        <module name="03-Spring-08-JDBC-02-Annotation" />
+        <module name="08-SpringBoot-06-StaticResources" />
+        <module name="05-springMVC-05-Date" />
+        <module name="05-springMVC-10-FileUpload" />
+        <module name="05-springMVC-13-ControllerAdvice" />
+        <module name="08-SpringBoot-00-Starter" />
+        <module name="03-Spring-07-DI-02-complexType" />
+        <module name="03-Spring-04-Scope" />
+        <module name="08-SpringBoot-18-Spring-Junit" />
+        <module name="05-springMVC-06-View" />
+        <module name="10-Swagger-03-SpringBoot" />
+        <module name="11-Thymeleaf-01-Java" />
+        <module name="03-Spring-07-Di" />
+        <module name="03-Spring-01-Start" />
+        <module name="05-springMVC-12-Excption" />
+        <module name="03-Spring-01-Learn" />
+        <module name="03-Spring-03-CreatBean" />
+        <module name="03-Spring-09-AOP-01-XML" />
+        <module name="03-Spring-08-JDBC-01-xml" />
+        <module name="05-springMVC-11-FileDownload" />
+        <module name="06-SSM-02-Pk" />
+        <module name="02-Mybatis-13-Dynamic" />
+        <module name="03-Spring-00-ThreeLayerApplication" />
+        <module name="02-MyBatis-08-Binding" />
+        <module name="06-SSM-04-Cloud-Diary" />
+        <module name="10-Swagger-01-SpringBoot" />
+        <module name="08-SpringBoot-19-Mail" />
+        <module name="11-Thymeleaf-02-SpringBoot" />
+        <module name="02-MyBatis-12-More-Table" />
+        <module name="05-springMVC-03-Bean" />
+        <module name="02-MyBatis-15-PageHelper" />
+        <module name="05-SpringMVC-04-Filter" />
+        <module name="05-springMVC-15-Jersey" />
+        <module name="07-JWT-02-Web" />
+        <module name="06-SSM-01-Wyy" />
+        <module name="08-SpringBoot-17-Spring-Junit" />
         <module name="03-Spring-10-Transaction-04-Propagate" />
         <module name="05-springMVC-9-Ajax" />
         <module name="08-SpringBoot-03-Profile" />
         <module name="03-Spring-10-Transaction-03-Annotcation" />
         <module name="03-Spring-10-Transaction-03-Annottaion" />
-        <module name="05-springMVC-16-CrossORigin" />
         <module name="08-SpringBoot-10-Restful" />
-        <module name="02-MyBatis-06-Alias" />
         <module name="02-MyBatis-16-Druid" />
         <module name="08-SpringBoot-11-Exception" />
         <module name="07-JWT-04-Web" />
         <module name="07-JWT-00-Session-Cookie" />
         <module name="08-SpringBoot-04-Annotation" />
-        <module name="07-JWT-03-StartUtil" />
+        <module name="08-SpringBoot-Ordering-Food" />
+        <module name="08-SpringBoot-20-Devtools" />
         <module name="08-SpringBoot-05-Conditional" />
         <module name="03-Spring-10-Transaction-02-XML" />
-        <module name="07-JWT-06-CustomJwt" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -180,9 +195,26 @@
       <module name="08-SpringBoot-09-MyBatis" target="1.8" />
       <module name="08-SpringBoot-10-Restful" target="1.8" />
       <module name="08-SpringBoot-11-Exception" target="1.8" />
+      <module name="08-SpringBoot-11-Exeception" target="1.8" />
       <module name="08-SpringBoot-12-Filter" target="1.8" />
+      <module name="08-SpringBoot-13-Interceptor" target="1.8" />
+      <module name="08-SpringBoot-14-FileUpload" target="1.8" />
+      <module name="08-SpringBoot-15-CrossOrigin" target="1.8" />
+      <module name="08-SpringBoot-16-i18n" target="1.8" />
+      <module name="08-SpringBoot-17-Spring-Junit" target="1.8" />
+      <module name="08-SpringBoot-18-Spring-Junit" target="1.8" />
+      <module name="08-SpringBoot-19-Mail" target="1.8" />
+      <module name="08-SpringBoot-20-Devtools" target="1.8" />
+      <module name="08-SpringBoot-21-Jasypt" target="1.8" />
+      <module name="08-SpringBoot-Ordering-Food" target="1.8" />
+      <module name="08-Swagger-01-SpringBoot" target="1.8" />
+      <module name="09-SpringBoot-01-Cloud-Diary" target="1.8" />
+      <module name="10-Swagger-01-SpringBoot" target="1.8" />
+      <module name="10-Swagger-02-SpringBoot" target="1.8" />
+      <module name="10-Swagger-03-SpringBoot" target="1.8" />
+      <module name="11-Thymeleaf-01-Java" target="1.8" />
+      <module name="11-Thymeleaf-02-SpringBoot" target="1.8" />
       <module name="_01-ThirdLayerApplication" target="1.8" />
-      <module name="_07-JWT-03-StartUtil" target="1.8" />
       <module name="_07-JWT-06-CustomJwt" target="1.8" />
     </bytecodeTargetLevel>
   </component>
@@ -200,7 +232,24 @@
       <module name="08-SpringBoot-09-MyBatis" options="-parameters" />
       <module name="08-SpringBoot-10-Restful" options="-parameters" />
       <module name="08-SpringBoot-11-Exception" options="-parameters" />
+      <module name="08-SpringBoot-11-Exeception" options="-parameters" />
       <module name="08-SpringBoot-12-Filter" options="-parameters" />
+      <module name="08-SpringBoot-13-Interceptor" options="-parameters" />
+      <module name="08-SpringBoot-14-FileUpload" options="-parameters" />
+      <module name="08-SpringBoot-15-CrossOrigin" options="-parameters" />
+      <module name="08-SpringBoot-16-i18n" options="-parameters" />
+      <module name="08-SpringBoot-17-Spring-Junit" options="-parameters" />
+      <module name="08-SpringBoot-18-Spring-Junit" options="-parameters" />
+      <module name="08-SpringBoot-19-Mail" options="-parameters" />
+      <module name="08-SpringBoot-20-Devtools" options="-parameters" />
+      <module name="08-SpringBoot-21-Jasypt" options="-parameters" />
+      <module name="08-SpringBoot-Ordering-Food" options="-parameters" />
+      <module name="08-Swagger-01-SpringBoot" options="-parameters" />
+      <module name="09-SpringBoot-01-Cloud-Diary" options="-parameters" />
+      <module name="10-Swagger-01-SpringBoot" options="-parameters" />
+      <module name="10-Swagger-02-SpringBoot" options="-parameters" />
+      <module name="10-Swagger-03-SpringBoot" options="-parameters" />
+      <module name="11-Thymeleaf-02-SpringBoot" options="-parameters" />
     </option>
   </component>
 </project>

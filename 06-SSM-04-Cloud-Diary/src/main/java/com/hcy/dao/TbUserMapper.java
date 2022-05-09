@@ -29,4 +29,10 @@ public interface TbUserMapper {
     int updateByPrimaryKey(TbUser record);
 
     TbUser select(@Param("username") String username,@Param("password")String password);
+
+    Integer update(@Param("nick")String nick,@Param("mood")String mood,@Param("id")Integer id);
+
+    Integer updateImg(@Param("head")String head,@Param("id")Integer id);
+
+    List<TbUser> selectNick(@Param("nick")String nick);
 }

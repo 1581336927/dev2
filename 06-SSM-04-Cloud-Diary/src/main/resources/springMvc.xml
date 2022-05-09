@@ -36,8 +36,10 @@
 
     <!-- 注解驱动 -->
     <mvc:annotation-driven/>
-    <mvc:resources location="/statics/css/" mapping="/css/**"/>
-    <mvc:resources location="/statics/js/" mapping="/js/**"/>
+    <mvc:resources location="/statics/" mapping="/**"/>
+
+
+
 
 
 </beans>
